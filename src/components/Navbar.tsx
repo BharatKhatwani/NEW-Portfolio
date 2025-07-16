@@ -1,19 +1,28 @@
 'use client';
 
 import Link from 'next/link';
-import { CiLight } from "react-icons/ci";
-import { FaMoon, FaBars, FaTimes } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useRouter, usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { CiLight } from 'react-icons/ci';
+import { FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Navbar() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const scrollTo = (id: string) => {
+    if (pathname !== '/') {
+      localStorage.setItem('scrollToId', id);
+      router.push('/');
+      return;
+    }
+
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false); // close menu on click
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -36,7 +45,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full bg-white dark:bg-black text-black dark:text-white z-50 shadow-md">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href={'/'} className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold">
           B.K
         </Link>
 
@@ -73,7 +82,6 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-black px-6 py-4 space-y-4 text-center font-medium shadow-md">
           <button onClick={() => scrollTo('home')} className="block w-full hover:text-blue-400">Home</button>
-          
           <Link href="/about" className="block w-full hover:text-blue-400" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <button onClick={() => scrollTo('skills')} className="block w-full hover:text-blue-400">Skills</button>
           <button onClick={() => scrollTo('projects')} className="block w-full hover:text-blue-400">Projects</button>

@@ -115,9 +115,9 @@ const [rotation] = useState({ x: 0, y: 0 }); // or remove entirely if not needed
       const z = Math.sin(phi) * r;
 
       newIcons.push({
-       x: x * 200,
-y: y * 200,
-z: z * 200,
+       x: x * 300,
+y: y * 300,
+z: z * 300,
 
         scale: 1,
         opacity: 1,

@@ -10,11 +10,23 @@ import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { useEffect } from 'react';
 
 export default function Home() {
+useEffect(() => {
+  const id = localStorage.getItem('scrollToId');
+  if (id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+    localStorage.removeItem('scrollToId');
+  }
+}, []);
+
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen  px-4 py-10">
-      <section className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-6xl">
+    <main id="home" className="flex flex-col items-center justify-center min-h-screen  px-4 py-10">
+      <section  className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-6xl">
 
         {/* Left Side - Text + Buttons */}
         <div className="flex-1 text-center md:text-left space-y-6">

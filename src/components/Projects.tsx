@@ -58,12 +58,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Section id="projects" className="px-4 py-16">
+    <Section id="projects" className="px-4 scroll-mt-28">
       <TextAnimate
         animation="blurInUp"
         by="character"
         once
-        className="text-7xl sm:text-5xl font-bold mb-12 text-center"
+        className="text-7xl sm:text-5xl font-bold mb-6 text-center"
       >
         PROJECTS
       </TextAnimate>
