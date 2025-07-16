@@ -56,7 +56,7 @@ export default function Contact() {
           animation="blurInUp"
           by="character"
           once
-          className="text-3xl sm:text-7xl font-bold text-center mb-16"
+          className="text-4xl sm:text-5xl font-bold text-center mb-16"
         >
           CONTACT
         </TextAnimate>
@@ -117,6 +117,11 @@ export default function Contact() {
           )}
         </form>
       </div>
+  <h3 className="mt-12 text-center text-sm opacity-80 dark:text-white">
+  Made with ❤️ by <span className="font-semibold">Bharat Khatwani</span>
+</h3>
+
+
     </section>
   );
 }

@@ -54,7 +54,8 @@ export default function Skills() {
         once
         className="text-4xl sm:text-5xl font-bold mb-12 text-center"
       >
-        Technologies
+        
+        TECHNOLOGIES
       </TextAnimate>
 
       <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
