@@ -25,8 +25,11 @@ useEffect(() => {
   }
 }, []);
 
+
+  
+
   return (
-   <main id="home" className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-10">
+ <main id="home" className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-10 pt-24 md:pt-0">
 
       <SpotlightBackground/>
       <section  className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-6xl">

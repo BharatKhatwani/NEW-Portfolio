@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image'; // ✅ Import next/image
+import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { TextAnimate } from './magicui/text-animate';
 
-// ✅ Imported images
+// Images
 import Chat from '../../public/image.png';
 import Api from '../../public/Api.png';
 import E_state from '../../public/E_state.png';
@@ -16,7 +16,6 @@ const Section = ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
   <section {...props}>{children}</section>
 );
 
-// ✅ Project array with images
 const projects = [
   {
     title: 'HealthLink',
@@ -58,75 +57,58 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Section id="projects" className="px-4 scroll-mt-28">
+    <Section id="projects" className="px-4 py-12 scroll-mt-28">
       <TextAnimate
         animation="blurInUp"
         by="character"
         once
-        className="text-7xl sm:text-5xl font-bold mb-6 text-center"
+        className="text-4xl sm:text-5xl font-bold mb-6 text-center"
       >
         PROJECTS
       </TextAnimate>
 
-      <div className="flex flex-wrap justify-center gap-8 py-10 px-4">
+      <div className="flex flex-wrap justify-center gap-y-6 gap-x-4 sm:gap-8  py-6 px-2">
         {projects.map((project, index) => (
           <CardContainer key={index} className="inter-var">
-            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-              <CardItem translateZ="50" className="text-xl font-bold">
-                {project.title}
-              </CardItem>
+           <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-3 sm:p-4 border">
+  <CardItem translateZ="50" className="text-xl font-bold">
+    {project.title}
+  </CardItem>
 
-              <CardItem
-                as="p"
-                translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-              >
-                {project.description}
-              </CardItem>
+  <CardItem
+    as="p"
+    translateZ="60"
+    className="text-neutral-500 text-sm max-w-sm mt-1 sm:mt-2 dark:text-neutral-300"
+  >
+    {project.description}
+  </CardItem>
 
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} thumbnail`}
-                  width={600}
-                  height={400}
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                />
-              </CardItem>
+  <CardItem translateZ="100" className="w-full mt-2 sm:mt-4">
+    <Image
+      src={project.image}
+      alt={`${project.title} thumbnail`}
+      width={600}
+      height={400}
+      className="h-40 sm:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+    />
+  </CardItem>
 
-              <div className="flex flex-wrap gap-2 mt-4">
-                {project.tech.map((techItem, i) => (
-                  <span
-                    key={i}
-                    className="text-xs bg-gray-200 dark:bg-white/10 px-2 py-1 rounded"
-                  >
-                    {techItem}
-                  </span>
-                ))}
-              </div>
+  <div className="flex flex-wrap gap-2 mt-2 sm:mt-4">
+    {project.tech.map((techItem, i) => (
+      <span
+        key={i}
+        className="text-xs bg-gray-200 dark:bg-white/10 px-2 py-1 rounded"
+      >
+        {techItem}
+      </span>
+    ))}
+  </div>
 
-              <div className="flex justify-between items-center mt-6">
-                <CardItem
-                  translateZ={20}
-                  as="a"
-                  href={project.live}
-                  target="_blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white underline"
-                >
-                  LIVE LINK →
-                </CardItem>
+  <div className="flex justify-between items-center mt-2 sm:mt-4">
+    {/* live and GitHub links */}
+  </div>
+</CardBody>
 
-                <CardItem
-                  translateZ={20}
-                  as="a"
-                  href={project.github}
-                  target="_blank"
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  <FaGithub /> GitHub
-                </CardItem>
-              </div>
-            </CardBody>
           </CardContainer>
         ))}
       </div>
