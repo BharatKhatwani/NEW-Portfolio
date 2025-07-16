@@ -66,7 +66,7 @@ const About = () => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://twitter.com/BharatKhatwani"
+              href="https://x.com/BharatKhatwan13"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter (X) Profile"

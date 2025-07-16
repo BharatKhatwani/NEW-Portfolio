@@ -83,7 +83,7 @@ useEffect(() => {
   </a>
 
   <a
-    href="https://twitter.com/yourusername"
+    href="https://x.com/BharatKhatwan13"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
