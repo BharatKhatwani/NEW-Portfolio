@@ -106,6 +106,24 @@ export default function Projects() {
 
   <div className="flex justify-between items-center mt-2 sm:mt-4">
     {/* live and GitHub links */}
+       <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.live}
+                  target="_blank"
+                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white underline"
+                >
+                  LIVE LINK →
+                </CardItem>
+                 <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.github}
+                  target="_blank"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                >
+                  <FaGithub /> GitHub
+                </CardItem>
   </div>
 </CardBody>
 
