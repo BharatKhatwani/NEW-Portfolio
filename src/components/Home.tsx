@@ -69,7 +69,7 @@ export default function Home() {
   rel="noopener noreferrer"
 >
   <ShinyButton>
-    See RESUME
+    VIEW RESUME
   </ShinyButton>
 </a>
 

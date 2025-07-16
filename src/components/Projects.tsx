@@ -7,7 +7,7 @@ import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { TextAnimate } from './magicui/text-animate';
 
 // ✅ Imported images
-import Chat from '../../public/Chat.png';
+import Chat from '../../public/image.png';
 import Api from '../../public/Api.png';
 import E_state from '../../public/E_state.png';
 import HeathLink from '../../public/HealthLink.png';
