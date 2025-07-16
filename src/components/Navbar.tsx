@@ -50,19 +50,20 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-6 font-medium">
-          <li><button onClick={() => scrollTo('home')} className="hover:text-blue-400 transition">Home</button></li>
-          <li><Link href="/about" className="hover:text-blue-400 transition">About</Link></li>
-          <li><button onClick={() => scrollTo('skills')} className="hover:text-blue-400 transition">Skills</button></li>
-          <li><button onClick={() => scrollTo('projects')} className="hover:text-blue-400 transition">Projects</button></li>
-          <li><button onClick={() => scrollTo('contact')} className="hover:text-blue-400 transition">Contact</button></li>
-        </ul>
+      <ul className="hidden md:flex gap-6 font-medium">
+  <li><button onClick={() => scrollTo('home')} className="cursor-pointer hover:text-blue-400 transition">Home</button></li>
+  <li><Link href="/about" className="cursor-pointer hover:text-blue-400 transition">About</Link></li>
+  <li><button onClick={() => scrollTo('skills')} className="cursor-pointer hover:text-blue-400 transition">Skills</button></li>
+  <li><button onClick={() => scrollTo('projects')} className="cursor-pointer hover:text-blue-400 transition">Projects</button></li>
+  <li><button onClick={() => scrollTo('contact')} className="cursor-pointer hover:text-blue-400 transition">Contact</button></li>
+</ul>
+
 
         {/* Theme Toggle + Hamburger */}
         <div className="flex items-center gap-4">
           <button
             onClick={toggleTheme}
-            className="text-2xl p-2 rounded-full hover:bg-white/10 transition"
+            className="text-2xl cursor-pointer p-2 rounded-full hover:bg-white/10 transition"
             title="Toggle Theme"
           >
             {theme === 'dark' ? <CiLight /> : <FaMoon />}
@@ -70,7 +71,7 @@ export default function Navbar() {
 
           {/* Hamburger Menu (Mobile only) */}
           <button
-            className="md:hidden text-2xl"
+            className=" cursor-pointer md:hidden text-2xl "
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -80,12 +81,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-black px-6 py-4 space-y-4 text-center font-medium shadow-md">
-          <button onClick={() => scrollTo('home')} className="block w-full hover:text-blue-400">Home</button>
+        <div className="md:hidden bg-white dark:bg-black px-6 py-4 space-y-4  text-center font-medium shadow-md">
+          <button onClick={() => scrollTo('home')} className="block w-full cursor-pointer hover:text-blue-400">Home</button>
           <Link href="/about" className="block w-full hover:text-blue-400" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-          <button onClick={() => scrollTo('skills')} className="block w-full hover:text-blue-400">Skills</button>
-          <button onClick={() => scrollTo('projects')} className="block w-full hover:text-blue-400">Projects</button>
-          <button onClick={() => scrollTo('contact')} className="block w-full hover:text-blue-400">Contact</button>
+          <button onClick={() => scrollTo('skills')} className="block cursor-pointer w-full hover:text-blue-400">Skills</button>
+          <button onClick={() => scrollTo('projects')} className="block w-full  cursor-pointer hover:text-blue-400">Projects</button>
+          <button onClick={() => scrollTo('contact')} className="block w-full cursor-pointer hover:text-blue-400">Contact</button>
         </div>
       )}
     </header>

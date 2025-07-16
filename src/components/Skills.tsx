@@ -25,7 +25,7 @@ const skills = [
   { name: 'React', icon: <FaReact size={40} color="#61DAFB" /> },
   { name: 'Node.js', icon: <FaNodeJs size={40} color="#339933" /> },
   { name: 'MongoDB', icon: <SiMongodb size={40} color="#47A248" /> },
-  { name: 'Express', icon: <SiExpress size={40} color="#ffffff" /> },
+  { name: 'Express', icon: <div className="text-black dark:text-white"><SiExpress size={40} color="currentColor" /></div> },
   { name: 'JavaScript', icon: <SiJavascript size={40} color="#F7DF1E" /> },
   { name: 'TypeScript', icon: <SiTypescript size={40} color="#3178C6" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={40} color="#06B6D4" /> },
@@ -33,10 +33,13 @@ const skills = [
   { name: 'Java', icon: <FaJava size={40} color="#007396" /> },
   { name: 'Redux', icon: <SiRedux size={40} color="#764ABC" /> },
   { name: 'HTML5', icon: <FaHtml5 size={40} color="#E34F26" /> },
-  { name: 'Next.js', icon: <SiNextdotjs size={40} color="white" /> },
+  { name: 'Next.js', icon: <div className="text-black dark:text-white"><SiNextdotjs size={40} color="currentColor" /></div> },
   { name: 'PostgreSQL', icon: <SiPostgresql size={40} color="#336791" /> },
   { name: 'Prisma', icon: <SiPrisma size={40} color="#0C344B" /> },
   { name: 'Docker', icon: <FaDocker size={40} color="#0db7ed" /> },
+ 
+
+
 ];
 
 export default function Skills() {
@@ -58,7 +61,7 @@ export default function Skills() {
         {skills.map(({ name, icon }, index) => (
           <motion.div
             key={name}
-            className="flex flex-col items-center justify-center bg-[#121212] rounded-xl p-6 shadow-md hover:scale-110 transition-transform"
+            className="flex flex-col items-center justify-center  rounded-xl p-6 shadow-md hover:scale-110 transition-transform"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
@@ -66,7 +69,8 @@ export default function Skills() {
             style={{ width: '110px' }}
           >
             {icon}
-            <p className="mt-2 text-white font-medium text-sm text-center">{name}</p>
+           <p className="mt-2 text-black dark:text-white font-medium text-sm text-center">{name}</p>
+
           </motion.div>
         ))}
       </div>

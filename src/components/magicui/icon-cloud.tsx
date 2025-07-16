@@ -115,9 +115,9 @@ const [rotation] = useState({ x: 0, y: 0 }); // or remove entirely if not needed
       const z = Math.sin(phi) * r;
 
       newIcons.push({
-       x: x * 300,
-y: y * 300,
-z: z * 300,
+       x: x * 220,
+y: y * 220,
+z: z * 220,
 
         scale: 1,
         opacity: 1,
@@ -228,7 +228,7 @@ z: z * 300,
       const dx = mousePos.x - centerX;
       const dy = mousePos.y - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      const speed = 0.003 + (distance / maxDistance) * 0.01;
+      const speed = 0.003 + (distance / maxDistance) * 0.02;
 
       if (targetRotation) {
         const elapsed = performance.now() - targetRotation.startTime;
