@@ -30,16 +30,16 @@ const About = () => {
         }}
       >
         <p className="text-sm sm:text-base md:text-lg leading-relaxed tracking-wide text-left">
-          👋 I’m <span className="text-green-600 dark:text-green-400 font-bold">Bharat Khatwani</span> from <span className="font-semibold">Chhindwara, Madhya Pradesh, India</span>.
-          <span className="block mt-2">🎓 Final-year Computer Science & Engineering (AIML specialization) student at IPS Academy, Indore.</span>
+           I’m <span className="text-green-600 dark:text-green-400 font-bold">Bharat Khatwani</span> from <span className="font-semibold">Chhindwara, Madhya Pradesh, India</span>.
+          <span className="block mt-2"> Final-year Computer Science & Engineering (AIML specialization) student at IPS Academy, Indore.</span>
 
           <ul className="list-disc pl-5 mt-4 space-y-2">
-            <li>🧠 Solved 400+ problems on  <span className="font-semibold"><a href="https://leetcode.com/u/bharatkhatwani/" className="underline" target="_blank" rel="noopener noreferrer">LeetCode</a></span>.</li>
-            <li>📚 Solved 200+ questions on<span className="font-semibold"><a href="https://www.geeksforgeeks.org/user/bharatkhasczn/" className="underline" target="_blank" rel="noopener noreferrer"> GeeksforGeeks (GFG)</a></span>.</li>
-            <li>🚀 Built an <span className="font-semibold">Aircraft Tracking App</span> during a college-level hackathon.</li>
-            <li>💻 Hands-on experience with <span className="font-semibold">MERN stack</span> full-stack development.</li>
-            <li>🌐 Currently learning <span className="font-semibold">Next.js, DevOps, and AWS</span>.</li>
-            <li>🎯 Passionate about <span className="font-semibold">clean code, performance, and solving real-world problems</span>.</li>
+            <li> Solved 400+ problems on  <span className="font-semibold"><a href="https://leetcode.com/u/bharatkhatwani/" className="underline" target="_blank" rel="noopener noreferrer">LeetCode</a></span>.</li>
+            <li> Solved 200+ questions on<span className="font-semibold"><a href="https://www.geeksforgeeks.org/user/bharatkhasczn/" className="underline" target="_blank" rel="noopener noreferrer"> GeeksforGeeks (GFG)</a></span>.</li>
+            <li> Built an <span className="font-semibold">Aircraft Tracking App</span> during a college-level hackathon.</li>
+            <li> Hands-on experience with <span className="font-semibold">MERN stack</span> full-stack development.</li>
+            <li> Currently learning <span className="font-semibold">Next.js, DevOps, and AWS</span>.</li>
+            <li> Passionate about <span className="font-semibold">clean code, performance, and solving real-world problems</span>.</li>
           </ul>
         </p>
 
