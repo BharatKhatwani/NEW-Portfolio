@@ -40,9 +40,10 @@ export default function Contact() {
       } else {
         setStatus(data.message || '❌ Submission failed.');
       }
-    } catch (error) {
-      setStatus('❌ Network error. Try again later.');
-    }
+   } catch (error) {
+  console.error(error);
+  setStatus('❌ Network error. Try again later');
+}
   };
 
   return (
@@ -62,7 +63,7 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-6 bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-xl border dark:border-white/10"
+          className="flex flex-col gap-6 bg-white dark:bg-black p-8 rounded-2xl shadow-xl border dark:border-white/10"
         >
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium">Your Name</label>

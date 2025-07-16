@@ -2,7 +2,7 @@
 
 import { TypeAnimation } from 'react-type-animation';
 import IconCloudDemo from './magicui/Icons';
-import { RainbowButton } from './magicui/rainbow-button';
+
 import { ShinyButton } from '@/components/magicui/shiny-button';
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { FaLinkedin } from "react-icons/fa";
