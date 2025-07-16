@@ -35,7 +35,7 @@ const About = () => {
 
           <ul className="list-disc pl-5 mt-4 space-y-2">
             <li> Solved 400+ problems on  <span className="font-semibold"><a href="https://leetcode.com/u/bharatkhatwani/" className="underline" target="_blank" rel="noopener noreferrer">LeetCode</a></span>.</li>
-            <li> Solved 200+ questions on<span className="font-semibold"><a href="https://www.geeksforgeeks.org/user/bharatkhasczn/" className="underline" target="_blank" rel="noopener noreferrer"> GeeksforGeeks (GFG)</a></span>.</li>
+            <li> Solved 200+ problems on<span className="font-semibold"><a href="https://www.geeksforgeeks.org/user/bharatkhasczn/" className="underline" target="_blank" rel="noopener noreferrer"> GeeksforGeeks (GFG)</a></span>.</li>
             <li> Built an <span className="font-semibold">Aircraft Tracking App</span> during a college-level hackathon.</li>
             <li> Hands-on experience with <span className="font-semibold">MERN stack</span> full-stack development.</li>
             <li> Currently learning <span className="font-semibold">Next.js, DevOps, and AWS</span>.</li>
