@@ -50,24 +50,47 @@ useEffect(() => {
             repeat={Infinity}
           />
 
-      <div className="flex flex-wrap justify-center md:justify-start gap-6  text-lg">
- <a
-  href="mailto:bharatkhatwani796@gmail.com"
-  className="flex items-center gap-2 hover:text-white transition"
->
-  <MdEmail size={20} /> Email
-</a>
+     <div className="flex flex-wrap justify-center md:justify-start gap-6 text-lg">
+  <a
+    href="mailto:bharatkhatwani796@gmail.com"
+    className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
+  >
+    <MdEmail size={20} /> Email
+  </a>
 
-  <a href="https://leetcode.com/u/bharatkhatwani/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition">
+  <a
+    href="https://leetcode.com/u/bharatkhatwani/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
+  >
     <SiLeetcode size={20} /> LeetCode
   </a>
-  <a href="https://www.linkedin.com/in/bharat-khatwani-864616257/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition">
+
+  <a
+    href="https://www.linkedin.com/in/bharat-khatwani-864616257/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
+  >
     <FaLinkedin size={20} /> LinkedIn
   </a>
-  <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition">
-    <FaSquareXTwitter size={20} /> Twitter 
+
+  <a
+    href="https://twitter.com/yourusername"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
+  >
+    <FaSquareXTwitter size={20} /> Twitter
   </a>
-  <a href="https://github.com/BharatKhatwani" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition">
+
+  <a
+    href="https://github.com/BharatKhatwani"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
+  >
     <FaGithub size={20} /> GitHub
   </a>
 </div>
