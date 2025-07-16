@@ -51,11 +51,11 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
       <ul className="hidden md:flex gap-6 font-medium">
-  <li><button onClick={() => scrollTo('home')} className="cursor-pointer hover:text-blue-400 transition">Home</button></li>
-  <li><Link href="/about" className="cursor-pointer hover:text-blue-400 transition">About</Link></li>
-  <li><button onClick={() => scrollTo('skills')} className="cursor-pointer hover:text-blue-400 transition">Skills</button></li>
-  <li><button onClick={() => scrollTo('projects')} className="cursor-pointer hover:text-blue-400 transition">Projects</button></li>
-  <li><button onClick={() => scrollTo('contact')} className="cursor-pointer hover:text-blue-400 transition">Contact</button></li>
+  <li><button onClick={() => scrollTo('home')} className="cursor-pointer hover:text-green-500 transition">Home</button></li>
+  <li><Link href="/about" className="cursor-pointer hover:text-green-500 transition">About</Link></li>
+  <li><button onClick={() => scrollTo('skills')} className="cursor-pointer hover:text-green-500 transition">Skills</button></li>
+  <li><button onClick={() => scrollTo('projects')} className="cursor-pointer hover:text-green-500 transition">Projects</button></li>
+  <li><button onClick={() => scrollTo('contact')} className="cursor-pointer hover:text-green-500 transition">Contact</button></li>
 </ul>
 
 
@@ -82,11 +82,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-black px-6 py-4 space-y-4  text-center font-medium shadow-md">
-          <button onClick={() => scrollTo('home')} className="block w-full cursor-pointer hover:text-blue-400">Home</button>
-          <Link href="/about" className="block w-full hover:text-blue-400" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-          <button onClick={() => scrollTo('skills')} className="block cursor-pointer w-full hover:text-blue-400">Skills</button>
-          <button onClick={() => scrollTo('projects')} className="block w-full  cursor-pointer hover:text-blue-400">Projects</button>
-          <button onClick={() => scrollTo('contact')} className="block w-full cursor-pointer hover:text-blue-400">Contact</button>
+          <button onClick={() => scrollTo('home')} className="block w-full cursor-pointer hover:text-green-500">Home</button>
+          <Link href="/about" className="block w-full hover:text-green-500" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+          <button onClick={() => scrollTo('skills')} className="block cursor-pointer w-full hover:text-blue-500">Skills</button>
+          <button onClick={() => scrollTo('projects')} className="block w-full  cursor-pointer hover:text-blue-500">Projects</button>
+          <button onClick={() => scrollTo('contact')} className="block w-full cursor-pointer hover:text-blue-500">Contact</button>
         </div>
       )}
     </header>

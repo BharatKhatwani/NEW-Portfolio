@@ -10,7 +10,7 @@ export default function Main() {
   return (
     <div>
 
-      How to assign the route to the About Page ! 
+      
 
 
 <Home/>

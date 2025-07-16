@@ -10,6 +10,7 @@ import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import SpotlightBackground from '@/components/shared/SpotlightPreview'
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -25,7 +26,9 @@ useEffect(() => {
 }, []);
 
   return (
-    <main id="home" className="flex flex-col items-center justify-center min-h-screen  px-4 py-10">
+   <main id="home" className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-10">
+
+      <SpotlightBackground/>
       <section  className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-6xl">
 
         {/* Left Side - Text + Buttons */}
