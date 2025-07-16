@@ -73,6 +73,7 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-black px-6 py-4 space-y-4 text-center font-medium shadow-md">
           <button onClick={() => scrollTo('home')} className="block w-full hover:text-blue-400">Home</button>
+          
           <Link href="/about" className="block w-full hover:text-blue-400" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <button onClick={() => scrollTo('skills')} className="block w-full hover:text-blue-400">Skills</button>
           <button onClick={() => scrollTo('projects')} className="block w-full hover:text-blue-400">Projects</button>

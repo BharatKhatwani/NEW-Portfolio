@@ -228,7 +228,7 @@ z: z * 200,
       const dx = mousePos.x - centerX;
       const dy = mousePos.y - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      const speed = 0.003 + (distance / maxDistance) * 0.03;
+      const speed = 0.003 + (distance / maxDistance) * 0.01;
 
       if (targetRotation) {
         const elapsed = performance.now() - targetRotation.startTime;

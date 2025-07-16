@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex-1 text-center md:text-left space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             HEY, I AM{' '}
-            <TextAnimate animation="blurInUp" by="character" once>
+            <TextAnimate animation="blurInUp" by="character" once className='text-green-500'>
               BHARAT KHATWANI
             </TextAnimate>
           </h1>
