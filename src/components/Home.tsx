@@ -58,11 +58,14 @@ useEffect(() => {
 
      <div className="flex flex-wrap justify-center md:justify-start gap-6 text-lg">
   <a
-    href="mailto:bharatkhatwani796@gmail.com"
-    className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
-  >
-    <MdEmail size={20} /> Email
-  </a>
+  href="https://mail.google.com/mail/?view=cm&to=bharatkhatwani796@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 hover:text-black dark:hover:text-white transition"
+>
+  <MdEmail size={20} /> Email
+</a>
+
 
   <a
     href="https://leetcode.com/u/bharatkhatwani/"
