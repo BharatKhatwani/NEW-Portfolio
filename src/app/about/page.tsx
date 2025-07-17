@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { TextAnimate } from '@/components/magicui/text-animate';
+import Experience from '@/components/Experience';
 import SpotlightBackground from '@/components/shared/SpotlightPreview'
 
 const About = () => {
@@ -79,6 +80,7 @@ const About = () => {
 
         <div className="mt-10 border-t border-gray-300 dark:border-gray-700 w-20 mx-auto" />
       </motion.section>
+      <Experience/>
     </div>
   );
 };
