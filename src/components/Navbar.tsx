@@ -55,6 +55,7 @@ export default function Navbar() {
   <li><Link href="/about" className="cursor-pointer hover:text-green-500 transition">About</Link></li>
   <li><button onClick={() => scrollTo('skills')} className="cursor-pointer hover:text-green-500 transition">Skills</button></li>
   <li><button onClick={() => scrollTo('projects')} className="cursor-pointer hover:text-green-500 transition">Projects</button></li>
+    <li><Link href="/experience" className="cursor-pointer hover:text-green-500 transition">Experience</Link></li>
   <li><button onClick={() => scrollTo('contact')} className="cursor-pointer hover:text-green-500 transition">Contact</button></li>
 </ul>
 

@@ -49,7 +49,7 @@ const About = () => {
        
         <div className="mt-10 border-t border-gray-300 dark:border-gray-700 w-20 mx-auto" />
       </motion.section>
-      <Experience/>
+     
     </div>
   );
 };
