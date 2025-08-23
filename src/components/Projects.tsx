@@ -84,6 +84,7 @@ const projects = [
 
 export default function Projects() {
   const [filter, setFilter] = useState<'Full-stack' | 'Frontend' | 'Backend'>('Full-stack');
+  // const[active , setActive] = useState('blue');
 
   // filtering logic
   const filteredProjects = projects.filter((project) => {
@@ -108,11 +109,22 @@ export default function Projects() {
       </TextAnimate>
 
       {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 py-6 px-2 items-center">
-        <Button className='cursor-pointer' onClick={() => setFilter('Full-stack')}>Full-stack</Button>
-        <Button className='cursor-pointer' onClick={() => setFilter('Frontend')}>Frontend</Button>
-        <Button  className='cursor-pointer' onClick={() => setFilter('Backend')}>Backend</Button>
+     <div className="flex flex-wrap justify-center gap-4 py-6 px-2 items-center">
+        {['Full-stack', 'Frontend', 'Backend'].map((cat) => (
+          <Button
+            key={cat}
+            onClick={() => setFilter(cat as 'Full-stack' | 'Frontend' | 'Backend')}
+            className={`cursor-pointer ${
+              filter === cat
+                ? 'bg-blue-600 text-white' // Active color
+                : 'bg-gray-200 text-black dark:bg-gray-800 dark:text-white'
+            }`}
+          >
+            {cat}
+          </Button>
+        ))}
       </div>
+
 
       {/* Filtered Cards */}
       <div className="flex flex-wrap justify-center gap-y-6 gap-x-4 sm:gap-8 py-6 px-2">
