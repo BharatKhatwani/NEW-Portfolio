@@ -1,29 +1,42 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { TextAnimate } from './magicui/text-animate';
 import { Button } from './ui/button';
 
-// Images
+// Project Images
+import PayLock from '../../public/PayLock.png';
 import Chat from '../../public/chat.png';
 import Api from '../../public/Api.png';
 import E_state from '../../public/E_state.png';
-import HeathLink from '../../public/HealthLink.png';
 import Typing from '../../public/tryping.png';
-import E_commerence from '../../public/E_commerence.png'
+import E_commerence from '../../public/E_commerence.png';
 
+// Section wrapper
 const Section = ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
   <section {...props}>{children}</section>
 );
 
-const projects = [
+// Project type definition
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  live?: string;
+  github: string;
+  image: StaticImageData;
+  category: 'Full-stack' | 'Frontend' | 'Backend';
+}
+
+// Project data
+const projects: Project[] = [
   {
     title: 'TurboType',
     description:
-      'It is a typing platform in which people can calculate their typing speed and accuracy.',
+      'A typing platform for calculating typing speed and accuracy in real-time.',
     tech: ['Next.js', 'Tailwind CSS'],
     live: 'https://turbo-typer.vercel.app/',
     github: 'https://github.com/BharatKhatwani/TurboTyper',
@@ -31,39 +44,37 @@ const projects = [
     category: 'Frontend',
   },
   {
-    title: 'HealthLink',
+    title: 'PayLock',
     description:
-      'A full-stack hospital appointment system with role-based access, allowing patients to book and view appointments and doctors to manage bookings securely.',
-    tech: ['MongoDB', 'Express.js', 'Node.js', 'React', 'Tailwind CSS'],
-    live: 'https://hositpal-management.vercel.app',
-    github: 'https://github.com/BharatKhatwani/Hositpal_Management',
-    image: HeathLink,
+      'A secure and lightning-fast digital wallet system for modern payments. Ensures safe transactions, quick transfers, and a clean, user-friendly interface.',
+    tech: ['Prisma', 'PostgreSQL', 'Next.js', 'CI/CD', 'Tailwind CSS', 'Framer Motion', 'Recoil',  ' Turborepo monorepo'],
+    live: 'https://paylock-jet.vercel.app',
+    github: 'https://github.com/BharatKhatwani/PayLock',
+    image: PayLock,
     category: 'Full-stack',
   },
   {
-    title: 'Secure File Sharing Api',
+    title: 'Secure File Sharing API',
     description:
-      'A secure backend REST API for uploading and sharing files with authentication using JWT and storage in MongoDB.',
-    tech: ['MongoDB', 'JWT', 'Rest API'],
-    live: 'https://github.com/BharatKhatwani/Secure-File-Sharing-App',
+      'A secure backend REST API for uploading and sharing files with JWT authentication and MongoDB storage.',
+    tech: ['MongoDB', 'JWT', 'REST API'],
     github: 'https://github.com/BharatKhatwani/Secure-File-Sharing-App',
     image: Api,
     category: 'Backend',
   },
-{
-  title: 'E-commerce API',
-  description:
-    'A backend REST API for managing products, users, and orders with authentication using JWT and MongoDB.',
-  tech: ['Node.js', 'Express', 'MongoDB', 'JWT', 'REST API'],
-  github: 'https://github.com/BharatKhatwani/E_commerence_API',
-  image: E_commerence,
-  category: 'Backend',
-}
-,
+  {
+    title: 'E-commerce API',
+    description:
+      'A backend REST API for managing products, users, and orders with JWT authentication and MongoDB.',
+    tech: ['Node.js', 'Express', 'MongoDB', 'JWT', 'REST API'],
+    github: 'https://github.com/BharatKhatwani/E_commerence_API',
+    image: E_commerence,
+    category: 'Backend',
+  },
   {
     title: 'QuickTalk Chat App',
     description:
-      'A real-time chat application with Firebase Auth and Firestore supporting login, user presence, and chat features.',
+      'A real-time chat application using Firebase Auth and Firestore supporting login, user presence, and chat features.',
     tech: ['React', 'Firebase', 'Tailwind CSS'],
     live: 'https://final-chat-app-phi.vercel.app',
     github: 'https://github.com/BharatKhatwani/Final_ChatApp',
@@ -73,7 +84,7 @@ const projects = [
   {
     title: 'E-state Website',
     description:
-      'A sleek and animated real estate website frontend to showcase property listings using smooth transitions and modern UI.',
+      'A sleek, animated real estate frontend showcasing property listings with smooth transitions and modern UI.',
     tech: ['React', 'Framer Motion', 'Tailwind CSS'],
     live: 'https://e-state-pi.vercel.app/',
     github: 'https://github.com/BharatKhatwani/E-state-',
@@ -84,18 +95,9 @@ const projects = [
 
 export default function Projects() {
   const [filter, setFilter] = useState<'Full-stack' | 'Frontend' | 'Backend'>('Full-stack');
-  // const[active , setActive] = useState('blue');
 
-  // filtering logic
-  const filteredProjects = projects.filter((project) => {
-    if (filter === 'Full-stack') {
-      return (
-        project.category === 'Full-stack' 
-       
-      );
-    }
-    return project.category === filter;
-  });
+  // Filtered projects
+  const filteredProjects = projects.filter((project) => project.category === filter);
 
   return (
     <Section id="projects" className="px-4 py-12 scroll-mt-28">
@@ -109,14 +111,14 @@ export default function Projects() {
       </TextAnimate>
 
       {/* Filter Buttons */}
-     <div className="flex flex-wrap justify-center gap-4 py-6 px-2 items-center">
+      <div className="flex flex-wrap justify-center gap-4 py-6 px-2 items-center">
         {['Full-stack', 'Frontend', 'Backend'].map((cat) => (
           <Button
             key={cat}
             onClick={() => setFilter(cat as 'Full-stack' | 'Frontend' | 'Backend')}
             className={`cursor-pointer ${
               filter === cat
-                ? 'bg-blue-600 text-white' // Active color
+                ? 'bg-blue-600 text-white'
                 : 'bg-gray-200 text-black dark:bg-gray-800 dark:text-white'
             }`}
           >
@@ -125,8 +127,7 @@ export default function Projects() {
         ))}
       </div>
 
-
-      {/* Filtered Cards */}
+      {/* Project Cards */}
       <div className="flex flex-wrap justify-center gap-y-6 gap-x-4 sm:gap-8 py-6 px-2">
         {filteredProjects.map((project, index) => (
           <CardContainer key={index} className="inter-var">
@@ -153,6 +154,7 @@ export default function Projects() {
                 />
               </CardItem>
 
+              {/* Tech tags */}
               <div className="flex flex-wrap gap-2 mt-2 sm:mt-4">
                 {project.tech.map((techItem, i) => (
                   <span
@@ -164,32 +166,29 @@ export default function Projects() {
                 ))}
               </div>
 
-             <div className="flex justify-between items-center mt-2 sm:mt-4">
-  {/* Conditionally render LIVE LINK */}
-  {project.category !== 'Backend' && (
-    <CardItem
-      translateZ={20}
-      as="a"
-      href={project.live}
-      target="_blank"
-      className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white underline"
-    >
-      LIVE LINK →
-    </CardItem>
-  )}
-
-  {/* GitHub link is always shown */}
-  <CardItem
-    translateZ={20}
-    as="a"
-    href={project.github}
-    target="_blank"
-    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-  >
-    <FaGithub /> GitHub
-  </CardItem>
-</div>
-
+              {/* Links */}
+              <div className="flex justify-between items-center mt-2 sm:mt-4">
+                {project.live && project.category !== 'Backend' && (
+                  <CardItem
+                    translateZ={20}
+                    as="a"
+                    href={project.live}
+                    target="_blank"
+                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white underline"
+                  >
+                    LIVE LINK →
+                  </CardItem>
+                )}
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.github}
+                  target="_blank"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                >
+                  <FaGithub /> GitHub
+                </CardItem>
+              </div>
             </CardBody>
           </CardContainer>
         ))}

@@ -4,13 +4,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TextAnimate } from './magicui/text-animate';
 import { FaReact, FaNodeJs, FaGitAlt, FaDocker, FaHtml5, FaJava } from 'react-icons/fa';
+import { FaAws } from 'react-icons/fa';
+import { SiGithubactions } from 'react-icons/si';
 import {
   SiMongodb,
   SiExpress,
   SiJavascript,
   SiTypescript,
   SiTailwindcss,
-  SiRedux,
+  // SiRedux
   SiNextdotjs,
   SiPostgresql,
   SiPrisma,
@@ -31,17 +33,14 @@ const skills = [
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={40} color="#06B6D4" /> },
   { name: 'Git', icon: <FaGitAlt size={40} color="#F05032" /> },
   { name: 'Java', icon: <FaJava size={40} color="#007396" /> },
-  { name: 'Redux', icon: <SiRedux size={40} color="#764ABC" /> },
   { name: 'HTML5', icon: <FaHtml5 size={40} color="#E34F26" /> },
   { name: 'Next.js', icon: <div className="text-black dark:text-white"><SiNextdotjs size={40} color="currentColor" /></div> },
   { name: 'PostgreSQL', icon: <SiPostgresql size={40} color="#336791" /> },
   { name: 'Prisma', icon: <SiPrisma size={40} color="#0C344B" /> },
   { name: 'Docker', icon: <FaDocker size={40} color="#0db7ed" /> },
- 
-
-
+  { name: 'CI/CD', icon: <SiGithubactions size={40} color="#2088FF" /> },
+  { name: 'AWS EC2/S3', icon: <FaAws size={40} color="#FF9900" /> },
 ];
-
 export default function Skills() {
   return (
     <Section
